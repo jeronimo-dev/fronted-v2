@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taskdun PRO</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500;600;700&family=Lato:wght@400;700&family=PT+Serif:wght@400;700&family=Roboto:wght@400;700&family=Saira:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet"/>
+    <style>
+      :root {
+        --c-bg-body: #101112;
+        --c-bg-sidebar: #293e53;
+        --c-bg-card: #1C1D1F;
+        --c-bg-input: #101112;
+        --c-text-main: #EAEAEA;
+        --c-text-secondary: #8a8a9e;
+        --c-accent-action: #39FF14;
+        --c-accent-error: #ff4d4d;
+        --c-accent-focus: #00e5ff;
+        --c-accent-dunner: #ffd700;
+        --c-border-color: #333333;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--c-bg-body);
+        color: var(--c-text-main);
+        background-image: 
+          linear-gradient(rgba(45, 45, 55, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(45, 45, 55, 0.08) 1px, transparent 1px);
+        background-size: 2rem 2rem;
+        background-attachment: fixed;
+      }
+      .custom-select-arrow {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23EAEAEA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 0.75rem center;
+        background-size: 1.25em 1.25em;
+      }
+      @keyframes fade-in-up {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in-up {
+        animation: fade-in-up 0.4s ease-out forwards;
+      }
+       @keyframes shake {
+        10%, 90% { transform: translate3d(-1px, 0, 0); }
+        20%, 80% { transform: translate3d(2px, 0, 0); }
+        30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+        40%, 60% { transform: translate3d(4px, 0, 0); }
+      }
+      .animate-shake {
+          animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
+      }
+      .font-neue-machina {
+        font-family: 'Saira', sans-serif;
+      }
+       *, *::before, *::after {
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+      }
+       .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #222;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 4px;
+            border: 2px solid #222;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #777;
+        }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-dom": "https://esm.sh/react-dom@^19.1.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.7.0",
+    "@dnd-kit/core": "https://esm.sh/@dnd-kit/core@6.1.0",
+    "@dnd-kit/sortable": "https://esm.sh/@dnd-kit/sortable@8.0.0",
+    "@dnd-kit/utilities": "https://esm.sh/@dnd-kit/utilities@3.2.2"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
